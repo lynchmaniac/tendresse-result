@@ -20,6 +20,7 @@
     "cors": "^2.8.4",
     "custom-error-generator": "^7.0.0",
     "express": "^4.15.2",
+    "express-fileupload": "^0.4.0",
     "fs": "0.0.1-security",
     "moment": "^2.19.1",
     "path": "^0.12.7",

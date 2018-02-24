@@ -1,7 +1,7 @@
 "use strict";
 
 require('babel-register');
-let threerest = require('threerest');
+//let threerest = require('threerest');
 let path = require('path');
 let cors = require('cors');
 let request = require('request');
@@ -11,9 +11,12 @@ import * as ServiceTop from "./services/serviceTop";
 
 import express from "express";
 
+const fileUpload = require('express-fileupload');
+
 var app = express();
 
 app.use(cors());
+app.use(fileUpload());
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -27,6 +30,13 @@ app.get("/", function(req, res){
 
 app.get("/top", function(req, res){
   res.send(ServiceTop.getTop3());
+});
+
+app.post('/file-upload', function(req, res, next) {
+  console.log(req.body);
+  console.log(req.files);
+  fs.writeFileSync('results/' + req.files.files.name, req.files.files.data)
+  res.send('File uploaded!');
 });
 
 
