@@ -1,0 +1,33 @@
+{
+  "name": "tendresse-result",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --display-error-details",
+    "start": "webpack --display-error-details && node ./dist/app"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-register": "^6.18.0",
+    "clean-webpack-plugin": "^0.1.15",
+    "cors": "^2.8.4",
+    "custom-error-generator": "^7.0.0",
+    "express": "^4.15.2",
+    "fs": "0.0.1-security",
+    "moment": "^2.19.1",
+    "path": "^0.12.7",
+    "request": "^2.83.0",
+    "webpack": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2017": "^6.24.1"
+  }
+}

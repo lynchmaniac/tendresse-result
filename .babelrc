@@ -1,0 +1,15 @@
+{
+  "presets": [
+    [
+      "es2015",
+      {
+        "modules": "commonjs"
+      }
+    ],
+    "es2017"
+  ],
+  "plugins": [
+    "transform-decorators-legacy",
+    "transform-runtime"
+  ]
+}
