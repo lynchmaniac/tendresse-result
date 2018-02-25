@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 import fs from 'fs';
 import path from 'path';
 
@@ -40,6 +41,7 @@ export default {
   },
   plugins: [
     new CleanWebpackPlugin(path.resolve('dist')),
+    new CopyWebpackPlugin([{ from: '**/*', to: 'assets/', context: 'src/assets/' }]),
     new webpack.BannerPlugin({
       banner: 'require("source-map-support").install();',
       raw: true,
