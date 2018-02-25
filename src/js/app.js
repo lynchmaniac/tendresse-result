@@ -35,7 +35,7 @@ app.get("/top", function(req, res){
 app.post('/file-upload', function(req, res, next) {
   console.log(req.body);
   console.log(req.files);
-  fs.writeFileSync('results/' + req.files.files.name, req.files.files.data)
+  fs.writeFileSync('results/' + req.files.fileUpload.name, req.files.fileUpload.data)
   res.send('File uploaded!');
 });
 
