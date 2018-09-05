@@ -1,5 +1,7 @@
 # Development
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/lynchmaniac/tendresse-result.svg)](https://greenkeeper.io/)
+
 Launch application in development mode, including automatic refresh :
 ```sh
 npm install
